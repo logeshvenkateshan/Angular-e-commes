@@ -1,0 +1,25 @@
+<div class=" mt-3">
+    <h2 class="myProduct">My Products</h2>
+
+    <div class="card" style="width:350px; height:400px;">
+        <img class="card-img-top" src={{homeValueDataGet.thumbnail}} alt="Card image" style="width:100%">
+        <div class="card-body">
+            <p> Category : <span class="category_1">{{homeValueDataGet. category}}</span></p>
+
+            <h2 class="card-title"> {{homeValueDataGet.title}} <span class="View_price">
+                    {{ homeValueDataGet.discountAmount| currency :'INR'}}</span> </h2>
+
+
+            <h3 class="card-text"> {{homeValueDataGet.price |currency :'INR'}} </h3>
+
+            <div class="btnFlex">
+                <button *ngIf="!homeValueDataGet.isButtonDisabled" (click)="AddtoCartButton( homeValueDataGet)"
+                     class="btn btn-primary">Add To Card</button>
+
+                <button *ngIf="homeValueDataGet.isButtonDisabled" (click)="RemoveBtn(homeValueDataGet)"
+                    class="btn btn-danger">Remove</button>
+            </div>
+
+
+        </div>
+    </div>

@@ -1,0 +1,28 @@
+.card-title {
+    font-size: 20px;
+}
+
+.myProduct {
+    font-size: 20px;
+}
+
+.category_1 {
+    font-size: 15px;
+}
+
+.View_price {
+    font-size: 18px;
+}
+
+.card-text {
+    font-size: 17px;
+}
+
+.category_1 {
+    border: 1px solid rgb(22, 21, 21);
+    background-color: darkgrey;
+    color: white;
+    border-radius: 5px;
+    font-weight: bolder;
+
+}

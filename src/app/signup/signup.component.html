@@ -1,0 +1,30 @@
+<div class="SignBackgrounImg">
+
+
+    <div class="singupPage">
+
+        <h2 class="SingupHeading">Singup</h2>
+        <form (ngSubmit)="signUp()">
+
+            <div>
+                <!-- <label class="signupLable" for="email">Email:</label> -->
+                <input type="email" placeholder="Email" class="form-control" id="email" [(ngModel)]="newEmail" required
+                    [ngModelOptions]="{standalone: true}">
+
+            </div>
+
+            <!-- <label class="signupLable" for="password">Password:</label> -->
+
+            <div>
+                <input class="form-control" type="password" placeholder="password" id=" password"
+                    [(ngModel)]="newPassword" required [ngModelOptions]="{standalone: true}">
+            </div>
+
+            <!-- <button class="btn btn-success  signupLable mt-3" type="submit">signUp</button> -->
+
+            <div>
+                <button class="button-48" role="button"><span class="text">SING UP</span></button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+<div class="text-denger" *ngIf="errormessages">
+  {{ errormessages }}
+</div>
+
+<div class="nav">
+    <div>
+         <h2>This MY ALL PRODUCT LIST</h2>
+    </div>
+ 
+
+  <div *ngIf="!errormessages">
+    <button (click)="logout()" class="btn_logout">Logout</button>
+
+    <img
+      routerLink="/cartItem"
+      class="cratImg"
+      src="data:image/png;base64,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"
+      alt=""
+    />
+    <span routerLink="/cartItem" class="cartImg_Z_index">{{ cartCount }}</span>
+  </div>
+</div>
+
+<div>
+  <div class="card_Dispaly_Wrap continer">
+    <div class="mt-3" *ngFor="let value_data of dataes.service">
+      <app-app-card [homeValueDataGet]="value_data"></app-app-card>
+    </div>
+  </div>
+
+  <!-- <a routerLink="/about">About</a> -->
+  <!-- <br>
+<br> -->
+
+  <!-- <h1>FetchData List</h1> -->
+
+  <!-- 
+<table>
+    <thead>
+        <tr>
+            <th> ID</th>
+            <th>TITLE</th>
+            <th> DISCRIPTION</th>
+            <th>PRICE</th>
+            <th>DISCOUNTPERCENTAGE</th>
+            <th>RATING</th>
+            <th>STOCK</th>
+            <th>BRAND</th>
+            <th>CATEGORY</th>
+            <th>THUMBNAIL</th>
+            <th> IMAGE</th>
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of alldata.products">
+            <td>{{ item.id }}</td>
+            <td> <a routerLink="/products/{{ item.id }}"> {{ item.title }}</a>
+
+            </td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.discountPercentage }}</td>
+            <td>{{ item.rating }}</td>
+            <td>{{ item.stock }}</td>
+            <td>{{ item.brand }}</td>
+            <td>{{ item.category }}</td>
+            <td> <img class="img_hight" src={{item.thumbnail}}></td>
+            <div class="td_flex">
+                <span *ngFor="let photo of  item.images">
+                    <td><img class="img_hight" src={{photo}}></td>
+                </span>
+            </div>
+</tr>
+    </tbody>
+</table> -->
+
+  <!-- <a routerLink="/card">App_Card</a> -->
+  <!-- <h2>My Products</h2> -->
+
+  <!-- <app-card product="value_data"></app-card> -->
+
+  <!-- <div class="card" style="width:400px">
+        <img class="card-img-top" src={{value_data.thumbnail}} alt="Card image" style="width:100%">
+        <div class="card-body">
+            <p> Category : <span class="category_1">{{value_data. category}}</span></p>
+
+            <h2 class="card-title"> {{value_data.title}} <span class="View_price">
+                    {{ value_data.discountAmount| currency :'INR'}}</span> </h2>
+
+
+            <h3 class="card-text"> {{value_data.price |currency :'INR'}} </h3> 
+
+
+            <button class="btn btn-primary">Add To Card</button>
+        </div>
+    </div> -->
+</div>

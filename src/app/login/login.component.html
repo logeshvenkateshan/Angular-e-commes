@@ -1,0 +1,53 @@
+<div class="log">
+    <div class="singupPage">
+        <h2 class="SingupHeading">Login</h2>
+        <form (ngSubmit)="login()">
+
+            <div class="inputEmailDiv">
+
+                <input type="email" placeholder="Email" class="form-control" id="email" [(ngModel)]="email" required
+                    [ngModelOptions]="{standalone: true}">
+                <p *ngIf="">Invalid email!</p>
+
+                <i class="fa fa-envelope-o" style="font-size:16px"></i>
+
+
+
+            </div>
+            <div class="InputIcon">
+
+                <input class="form-control" placeholder="Password" [type]="showPassword ? 'text' : 'password'"
+                    id="password" [(ngModel)]="password" required [ngModelOptions]="{standalone: true}">
+
+
+                <i class="fa icon_eye" [ngClass]="{'fa-eye': showPassword, 'fa-eye-slash': !showPassword}"
+                    (click)="togglePasswordVisibility()"></i>
+
+                <p class="errorMsg">{{authservice.errormsg}}</p>
+
+                <!-- <p *ngIf="">Invalid password!</p> -->
+            </div>
+
+
+            <div class="forgetpass">
+                <!-- <button class=" btn btn-success  signupLable" type="submit">Login</button> -->
+                <button class="button-85" role="button">Login</button>
+
+                <span (click)="forGetPwd()">Forget
+                    Password?</span>
+            </div>
+
+
+
+
+            <div>
+                <p class="logincreateAccount">Don't have an account? <span class="regLink"
+                        routerLink="/signup">Register</span> </p>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+>

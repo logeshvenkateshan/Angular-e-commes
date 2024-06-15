@@ -1,0 +1,188 @@
+.log {
+
+    background-image: url(../../assets/img_3.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-control {
+
+    border: none;
+    border-bottom: 1px solid white;
+    width: 300px;
+    margin-left: 40px;
+    background-color: transparent;
+    border-radius: 0px;
+    color: white;
+    padding-top: 10px;
+
+}
+
+
+
+.form-control::placeholder {
+    color: whitesmoke;
+    opacity: 3;
+}
+
+.singupPage {
+    /* background-image: url(../../assets/img_2.avif); */
+    background-size: cover;
+    border: 1px solid whitesmoke;
+    width: 450px;
+
+    height: 250px;
+    box-shadow: 3px 3px 3px 3px;
+}
+
+
+.SingupHeading {
+    text-align: center;
+    color: white;
+}
+
+.button-85 {
+    color: white;
+    margin-left: 40px;
+    display: block;
+
+}
+
+.logincreateAccount {
+    color: rgb(182, 171, 171);
+    text-align: end;
+    font-size: 14px;
+
+}
+
+.inputEmailDiv {
+    position: relative;
+}
+
+.fa-envelope-o {
+    position: absolute;
+    left: 300px;
+    top: 15px;
+    color: beige;
+}
+
+.InputIcon {
+    position: relative;
+}
+
+.icon_eye {
+    position: absolute;
+    left: 300px;
+    top: 15px;
+    color: beige;
+    cursor: pointer;
+
+}
+
+.icon_eye-slash {
+    display: none;
+}
+
+.regLink {
+    color: rgb(46, 238, 238);
+    cursor: pointer;
+    padding-right: 40px;
+    padding-top: 10px;
+}
+
+.errorMsg {
+    margin-left: 40px;
+    color: red;
+}
+
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-85:before {
+    content: "";
+    background: linear-gradient(45deg,
+            #ff0000,
+            #ff7300,
+            #fffb00,
+            #48ff00,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.loader {
+    /* Your loader styles go here */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+}
+
+.forgetpass {
+    display: flex;
+    justify-content: space-around;
+    color: aliceblue;
+}
